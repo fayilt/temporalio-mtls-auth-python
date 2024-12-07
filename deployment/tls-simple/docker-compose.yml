@@ -12,7 +12,7 @@ services:
     volumes:
       - /var/lib/postgresql/data
   temporal:
-    image: temporalio/auto-setup:${SERVER_TAG:-latest}
+    image: temporalio/auto-setup:1.20
     ports:
       - "7233:7233"
     volumes:
@@ -58,7 +58,7 @@ services:
     depends_on:
       - postgresql
   temporal-ui:
-    image: temporalio/ui:${UI_TAG:-latest}
+    image: temporalio/ui:2.20.0
     ports:
       - "8080:8080"
     volumes:
