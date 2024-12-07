@@ -57,7 +57,7 @@ services:
       # - "TEMPORAL_JWT_KEY_SOURCE1=https://login.microsoftonline.com/{Tenant ID}/discovery/v2.0/keys"
       # - "TEMPORAL_JWT_KEY_REFRESH=30m"
     depends_on:
-      - cassandra
+      - postgresql
   temporal-ui:
     image: temporalio/ui:${UI_TAG:-latest}
     ports:
